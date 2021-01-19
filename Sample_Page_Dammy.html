@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sample_Page_Dynamic</title>
+
+    <style>
+/*         
+   body{
+        background-image: url('ait.jpg');
+        background-repeat: no-repeat;
+        background-position: left;
+   }     */
+
+   body{
+       height: 1200px;
+   }
+   h3{
+       text-align: left;
+       color: red;
+
+   }
+ div{
+     
+     border: 2px solid black;
+     width: 180px;
+     height: 210px;
+     color: black;
+ }
+   
+
+ .grid-container
+ {
+     display:grid;
+     grid-column-gap: 30px;
+     grid-template-columns : auto auto auto auto;
+     grid-row-gap: 20px;
+     justify-content: space-between;
+ }
+ .grid-item
+ {
+     background-color: burlywood;
+     }
+span{
+    display: flex;
+    flex: 1;
+     word-spacing: 9px;
+     color:white;
+     background-color: black;
+     height: 30px;
+     padding: 20px;
+}
+
+header{
+    width: fit-content;
+    height: 10px
+}
+footer{
+    background-color: black;
+    color:white;
+    position: relative;    
+    margin-top: 300px;
+    height: 220px;
+    
+    
+}
+.demo{
+
+    display: float;
+    float: left;
+}
+
+.grid-menu
+{
+ color: blue;
+}
+.menus{
+    
+    
+    display: inline;
+    
+
+    
+}
+</style>
+</head>
+<body>
+    <img src="ait.jpg" alt='ait'>
+    <header>
+ <span> UI-Development Angular ReactJS Python VUEJS MEAN MERN Digital-Marketing IONIC ReactNative Web-Devp </span>
+</header>
+    <h2> Trending Course</h2>
+    <div class ="grid-container">
+    <div class = "grid-item"><h3> Angular Develpment Course </h3>  
+       <p> Angular is popular for making dynamic application and its 
+        information offical and reliance infusion althogh....</p> 
+    </div>
+
+    <div class ="grid-item"><h3> ReactJs Course </h3>  <p>
+        React is a JavaScript library for building user interfaces.React is used to build single page 
+        applications.React allows us to create reusable UI components.....</p> 
+    </div>
+
+    <div class = "grid-item"><h3> Mean Stack Development Course </h3>  
+        <p> A full-stack JavaScript open-source solution used for designing dynamic websites and web 
+            applications is referred to as MEAN.js.      .....</p> 
+    </p></div>
+
+    <div class = "grid-item"><h3> Mern Stack Development Course </h3>  <p>
+        MERN Stack comprises of 4 technologies namely: MongoDB, Express, React and Node.js......</p> 
+    </p></div>
+    <div class = "grid-item"><h3> Web Develpment Course </h3>  <p>
+        Full stack developer course modules are designed by the experts who have expert hands-on
+         knowledge of the industry in addition to being excellent teachers.....</p> 
+    </p></div>
+    <div class = "grid-item"><h3> Digital Marketing Course </h3>  <p>
+        Digital Marketing is a branch of marketing that mainly involves technologies like internet,
+        computers and phones to promote the products and services online. ....</p> 
+    </p></div>
+    <div class = "grid-item"><h3> React Native Develpment Course </h3>  <p>
+        React Native is a JavaScript framework for building native mobile apps. It uses the React 
+        framework and offers large amount of inbuilt components and APIs.....</p> 
+    </p></div>
+    <div class = "grid-item"><h3> INOIC Develpment Course </h3>  <p>
+        Ionic is open source framework used for developing mobile applications. It provides tools 
+        and services for building Mobile UI with native look and feel.....</p> 
+    </p></div>
+</div>  
+
+
+<footer> 
+    
+
+</footer>
+    <script>
+
+
+var footerHtml ="";
+
+   var  footerHtmlData = [{
+        logo: 'ait.jpg'
+    },
+    {
+    menu_name: 'About'
+    },
+    {
+    menu_name: 'Services'
+    },
+    {
+    menu_name: 'Contact'
+    }
+    ];
+
+      footerHtml += `<div>
+				<img src="./${footerHtmlData[0].logo}" alt="AchieversIT"/>
+            </div> 
+            <ul class= "menus">`
+
+      for(let j=1; j<footerHtmlData.length; j++)
+      {
+        footerHtml += `<li>
+						<a href="#">${footerHtmlData[j].menu_name}</a>
+					</li>`
+      }    
+      footerHtml += '<ul>';
+        console.log(footerHtml); 
+
+        // appending into header portion
+
+        document.getElementsByTagName('footer')[0].innerHTML = footerHtml;  
+
+
+</script>
+</body>
+</html>
